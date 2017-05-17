@@ -1,0 +1,24 @@
+<%= form_for @job do |f| %>
+
+  <% if @job.errors.any? %>
+    <% @job.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  <% end %>
+  
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div>
+    <%= f.label :salary %>
+    <%= f.text_field :salary %>
+  </div>
+  <div>
+    <%= f.label :description %>
+    <%= f.text_area :description, size: '60x6' %>
+  </div>
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,7 @@
+<h1> Job Board </h1>
+
+<% @jobs.each do |job| %>
+  <h3><%= link_to job.title, job_path(job)%></h3>
+  <p><%= job.salary %></p>
+  <p><%= job.description %></p>
+<% end %>
